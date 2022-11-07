@@ -1,0 +1,17 @@
+{
+  "name": "LeetCodeRatio",
+  "description": "Leet code extension",
+  "version": "0",
+  "manifest_version": 3,
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/leet.png",
+      "24": "/images/leet.png",
+      "32": "/images/leet.png"
+    }
+  },
+  "permissions": ["webRequest","tabs", "storage", "activeTab", "scripting"]
+
+}
