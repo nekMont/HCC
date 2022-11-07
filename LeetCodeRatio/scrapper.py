@@ -62,31 +62,25 @@ for i in range(0,len(h)):
 
 for x in range(0,len(question_tittle)):
     listOfWords = question_tittle[x].split(ch, 1)
-    #print(listOfWords)
     listOfWords[1] = listOfWords[1].replace("(", "")
     listOfWords[1] = listOfWords[1].replace(")", "")
     listOfWords[1] = listOfWords[1].replace(",", "")
     listOfWords[1] = listOfWords[1].lower()
     formated_tittle.append(listOfWords[1].replace(" ", "-"))
 
-for x in range(0,2):
-    print(formated_tittle[x])
 
-for x in range(0,2):
+for x in range(0,len(formated_tittle)):
 
     questionurl = baseurl + str(formated_tittle[x])
     driver.get(questionurl)
     time.sleep(2)
     like = driver.find_elements(By.XPATH, '//*[@id="app"]/div/div[2]/div[1]/div/div[1]/div/div[1]/div[1]/div/div[2]/div/div[1]/div[2]/button[1]/span')
     dislike = driver.find_elements(By.XPATH, '//*[@id="app"]/div/div[2]/div[1]/div/div[1]/div/div[1]/div[1]/div/div[2]/div/div[1]/div[2]/button[2]/span')
-    likes_list.append(like[0].text)
-    dislikes_list.append(dislike[0].text)
+    question_likes.append(like[0].text)
+    question_dislikes.append(dislike[0].text)
     print("question " + str(x) + " Success")
 
     
-
-print(likes_list)
-print(dislikes_list)
 
 ####################################################################################################
 #csv file
