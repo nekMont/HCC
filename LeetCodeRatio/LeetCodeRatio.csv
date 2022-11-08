@@ -1,10 +1,52 @@
-1323. Maximum 69 Number,1. Two Sum,2. Add Two Numbers,3. Longest Substring Without Repeating Characters,4. Median of Two Sorted Arrays,5. Longest Palindromic Substring,6. Zigzag Conversion,7. Reverse Integer,8. String to Integer (atoi),9. Palindrome Number,10. Regular Expression Matching,11. Container With Most Water,12. Integer to Roman,13. Roman to Integer,14. Longest Common Prefix,15. 3Sum,16. 3Sum Closest,17. Letter Combinations of a Phone Number,18. 4Sum,19. Remove Nth Node From End of List,20. Valid Parentheses,21. Merge Two Sorted Lists,22. Generate Parentheses,23. Merge k Sorted Lists,24. Swap Nodes in Pairs,25. Reverse Nodes in k-Group,26. Remove Duplicates from Sorted Array,27. Remove Element,28. Find the Index of the First Occurrence in a String,29. Divide Two Integers,30. Substring with Concatenation of All Words,31. Next Permutation,32. Longest Valid Parentheses,33. Search in Rotated Sorted Array,34. Find First and Last Position of Element in Sorted Array,35. Search Insert Position,36. Valid Sudoku,37. Sudoku Solver,38. Count and Say,39. Combination Sum,40. Combination Sum II,41. First Missing Positive,42. Trapping Rain Water,43. Multiply Strings,44. Wildcard Matching,45. Jump Game II,46. Permutations,47. Permutations II,48. Rotate Image,49. Group Anagrams,"50. Pow(x, n)"
-79.8%,49.1%,39.8%,33.8%,35.2%,32.4%,43.1%,27.2%,16.6%,52.9%,28.2%,54.3%,61.5%,58.2%,40.8%,32.3%,46.2%,55.6%,36.5%,40.0%,40.7%,61.9%,71.9%,48.4%,60.4%,53.6%,50.4%,52.1%,37.6%,17.3%,30.9%,37.1%,32.7%,38.7%,41.5%,42.0%,56.8%,56.7%,51.3%,67.7%,53.3%,36.5%,58.8%,38.8%,26.8%,38.6%,74.8%,56.7%,70.0%,66.4%,32.8%
-Easy,Easy,Medium,Medium,Hard,Medium,Medium,Medium,Medium,Easy,Hard,Medium,Medium,Easy,Easy,Medium,Medium,Medium,Medium,Medium,Easy,Easy,Medium,Hard,Medium,Hard,Easy,Easy,Medium,Medium,Hard,Medium,Hard,Medium,Medium,Easy,Medium,Hard,Medium,Medium,Medium,Hard,Hard,Medium,Hard,Medium,Medium,Medium,Medium,Medium,Medium
-
-
-1323. Maximum 69 Number,1. Two Sum,2. Add Two Numbers,3. Longest Substring Without Repeating Characters,4. Median of Two Sorted Arrays,5. Longest Palindromic Substring,6. Zigzag Conversion,7. Reverse Integer,8. String to Integer (atoi),9. Palindrome Number,10. Regular Expression Matching,11. Container With Most Water,12. Integer to Roman,13. Roman to Integer,14. Longest Common Prefix,15. 3Sum,16. 3Sum Closest,17. Letter Combinations of a Phone Number,18. 4Sum,19. Remove Nth Node From End of List,20. Valid Parentheses,21. Merge Two Sorted Lists,22. Generate Parentheses,23. Merge k Sorted Lists,24. Swap Nodes in Pairs,25. Reverse Nodes in k-Group,26. Remove Duplicates from Sorted Array,27. Remove Element,28. Find the Index of the First Occurrence in a String,29. Divide Two Integers,30. Substring with Concatenation of All Words,31. Next Permutation,32. Longest Valid Parentheses,33. Search in Rotated Sorted Array,34. Find First and Last Position of Element in Sorted Array,35. Search Insert Position,36. Valid Sudoku,37. Sudoku Solver,38. Count and Say,39. Combination Sum,40. Combination Sum II,41. First Missing Positive,42. Trapping Rain Water,43. Multiply Strings,44. Wildcard Matching,45. Jump Game II,46. Permutations,47. Permutations II,48. Rotate Image,49. Group Anagrams,"50. Pow(x, n)"
-81.7%,49.1%,39.8%,33.8%,35.2%,32.4%,43.1%,27.2%,16.6%,52.9%,28.2%,54.3%,61.5%,58.2%,40.8%,32.3%,46.2%,55.6%,36.5%,40.0%,40.7%,61.9%,71.9%,48.4%,60.4%,53.6%,50.4%,52.1%,37.6%,17.3%,30.9%,37.1%,32.7%,38.7%,41.5%,42.0%,56.8%,56.7%,51.3%,67.7%,53.3%,36.5%,58.8%,38.8%,26.8%,38.6%,74.8%,56.7%,70.0%,66.4%,32.8%
-Easy,Easy,Medium,Medium,Hard,Medium,Medium,Medium,Medium,Easy,Hard,Medium,Medium,Easy,Easy,Medium,Medium,Medium,Medium,Medium,Easy,Easy,Medium,Hard,Medium,Hard,Easy,Easy,Medium,Medium,Hard,Medium,Hard,Medium,Medium,Easy,Medium,Hard,Medium,Medium,Medium,Hard,Hard,Medium,Hard,Medium,Medium,Medium,Medium,Medium,Medium
-1927,39856,22604,30087,20514,22446,4592,8893,2511,7756,9538,21113,4814,7849,11179,22432,8129,13143,8041,13694,16561,15776,15833,14703,8465,9566,8680,4685,781,3654,331,13477,9980,18436,14603,10463,6800,6833,2709,14020,7244,12257,23717,5370,6063,10010,13598,6709,12774,13155,6070
-172,1282,4376,1285,2317,1295,10047,11007,7346,2346,1525,1125,4828,464,3509,2050,448,777,933,566,845,1387,610,550,337,551,12415,6397,57,12030,21,3877,318,1093,357,488,815,183,5720,285,176,1484,330,2316,260,351,225,116,597,390,6545
+question name,acceptance,difficulty,likes,dislikes,link
+1544. Make The String Great,62.7%,Easy,1795,80,https://leetcode.com/problems/make-the-string-great
+1. Two Sum,49.1%,Easy,39898,1282,https://leetcode.com/problems/two-sum
+2. Add Two Numbers,39.8%,Medium,22628,4383,https://leetcode.com/problems/add-two-numbers
+3. Longest Substring Without Repeating Characters,33.8%,Medium,30112,1285,https://leetcode.com/problems/longest-substring-without-repeating-characters
+4. Median of Two Sorted Arrays,35.2%,Hard,20537,2321,https://leetcode.com/problems/median-of-two-sorted-arrays
+5. Longest Palindromic Substring,32.4%,Medium,22465,1297,https://leetcode.com/problems/longest-palindromic-substring
+6. Zigzag Conversion,43.1%,Medium,4596,10058,https://leetcode.com/problems/zigzag-conversion
+7. Reverse Integer,27.2%,Medium,8902,11023,https://leetcode.com/problems/reverse-integer
+8. String to Integer (atoi),16.6%,Medium,2517,7363,https://leetcode.com/problems/string-to-integer-atoi
+9. Palindrome Number,52.9%,Easy,7764,2347,https://leetcode.com/problems/palindrome-number
+10. Regular Expression Matching,28.2%,Hard,9547,1525,https://leetcode.com/problems/regular-expression-matching
+11. Container With Most Water,54.3%,Medium,21142,1125,https://leetcode.com/problems/container-with-most-water
+12. Integer to Roman,61.5%,Medium,4816,4831,https://leetcode.com/problems/integer-to-roman
+13. Roman to Integer,58.3%,Easy,7865,464,https://leetcode.com/problems/roman-to-integer
+14. Longest Common Prefix,40.8%,Easy,11196,3512,https://leetcode.com/problems/longest-common-prefix
+15. 3Sum,32.3%,Medium,22458,2049,https://leetcode.com/problems/3sum
+16. 3Sum Closest,46.2%,Medium,8137,448,https://leetcode.com/problems/3sum-closest
+17. Letter Combinations of a Phone Number,55.6%,Medium,13154,777,https://leetcode.com/problems/letter-combinations-of-a-phone-number
+18. 4Sum,36.5%,Medium,8052,934,https://leetcode.com/problems/4sum
+19. Remove Nth Node From End of List,40.0%,Medium,13708,567,https://leetcode.com/problems/remove-nth-node-from-end-of-list
+20. Valid Parentheses,40.7%,Easy,16580,845,https://leetcode.com/problems/valid-parentheses
+21. Merge Two Sorted Lists,61.9%,Easy,15797,1388,https://leetcode.com/problems/merge-two-sorted-lists
+22. Generate Parentheses,71.9%,Medium,15857,610,https://leetcode.com/problems/generate-parentheses
+23. Merge k Sorted Lists,48.4%,Hard,14719,552,https://leetcode.com/problems/merge-k-sorted-lists
+24. Swap Nodes in Pairs,60.4%,Medium,8472,337,https://leetcode.com/problems/swap-nodes-in-pairs
+25. Reverse Nodes in k-Group,53.6%,Hard,9578,551,https://leetcode.com/problems/reverse-nodes-in-k-group
+26. Remove Duplicates from Sorted Array,50.4%,Easy,8690,12425,https://leetcode.com/problems/remove-duplicates-from-sorted-array
+27. Remove Element,52.1%,Easy,4693,6410,https://leetcode.com/problems/remove-element
+28. Find the Index of the First Occurrence in a String,37.6%,Medium,792,59,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
+29. Divide Two Integers,17.3%,Medium,3660,12044,https://leetcode.com/problems/divide-two-integers
+30. Substring with Concatenation of All Words,30.9%,Hard,333,21,https://leetcode.com/problems/substring-with-concatenation-of-all-words
+31. Next Permutation,37.1%,Medium,13496,3877,https://leetcode.com/problems/next-permutation
+32. Longest Valid Parentheses,32.7%,Hard,9985,318,https://leetcode.com/problems/longest-valid-parentheses
+33. Search in Rotated Sorted Array,38.7%,Medium,18447,1095,https://leetcode.com/problems/search-in-rotated-sorted-array
+34. Find First and Last Position of Element in Sorted Array,41.6%,Medium,14617,357,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array
+35. Search Insert Position,42.0%,Easy,10478,488,https://leetcode.com/problems/search-insert-position
+36. Valid Sudoku,56.8%,Medium,6814,815,https://leetcode.com/problems/valid-sudoku
+37. Sudoku Solver,56.8%,Hard,6840,183,https://leetcode.com/problems/sudoku-solver
+38. Count and Say,51.3%,Medium,2711,5727,https://leetcode.com/problems/count-and-say
+39. Combination Sum,67.7%,Medium,14041,286,https://leetcode.com/problems/combination-sum
+40. Combination Sum II,53.3%,Medium,7257,177,https://leetcode.com/problems/combination-sum-ii
+41. First Missing Positive,36.5%,Hard,12268,1484,https://leetcode.com/problems/first-missing-positive
+42. Trapping Rain Water,58.8%,Hard,23746,330,https://leetcode.com/problems/trapping-rain-water
+43. Multiply Strings,38.8%,Medium,5375,2318,https://leetcode.com/problems/multiply-strings
+44. Wildcard Matching,26.8%,Hard,6065,260,https://leetcode.com/problems/wildcard-matching
+45. Jump Game II,38.6%,Medium,10027,351,https://leetcode.com/problems/jump-game-ii
+46. Permutations,74.8%,Medium,13612,225,https://leetcode.com/problems/permutations
+47. Permutations II,56.7%,Medium,6715,116,https://leetcode.com/problems/permutations-ii
+48. Rotate Image,70.0%,Medium,12791,597,https://leetcode.com/problems/rotate-image
+49. Group Anagrams,66.4%,Medium,13166,390,https://leetcode.com/problems/group-anagrams
+"50. Pow(x, n)",32.8%,Medium,6075,6554,https://leetcode.com/problems/powx-n
