@@ -6,7 +6,7 @@ public class reader {
    public static void main (String args[]) throws IOException {
    
    try {
-   
+	System.out.println("file ran");
       // declare file to be the webscrapped info
    	File f = new File("LeetCodeRatio.csv");
    	// declare scanner to look at data file
@@ -92,7 +92,7 @@ public class reader {
    	      pen.write("\t<tr bgcolor=\"seashell\" align=\"center\">\n");
    	   
    	      // add question cell
-   	      pen.write("\t\t<td align=\"left\"><a href=\"" + link + "\">" + question + "</a></td>\n");
+   	      pen.write("\t\t<td align=\"left\"><a href=\"" + link + "\" target='_blank' rel='noopener noreferrwe'>" + question + "</a></td>\n");
    	   
    	      // add difficulty cell with color!
    	      if (difficulty.contains("Easy"))
