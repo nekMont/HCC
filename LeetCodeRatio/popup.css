@@ -1,11 +1,38 @@
+/* creates triangle in header when sorting */
+.table-sortable th {
+  cursor: pointer;
+}
+
+/* sets triangle pointing up in header when sorting */
+.table-sortable .th-sort-asc::after {
+  content: "\25b4";
+}
+
+/* sets triangle pointing down in header when sorting */
+.table-sortable .th-sort-desc::after {
+  content: "\25be";
+}
+
+/* sets triangle position in header when sorting */
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+/* sets triangle color in header when sorting */
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+  background: rgba(0,0,0,0.1);
+}
+
 body {
-    min-width: 600px;
-    min-height: 300px;
-    background-color: transparent;
-  }
+  min-width: 600px;
+  min-height: 300px;
+  background-color: transparent;
+}
+
+#greeting {
   
-  #greeting {
-    
-    margin: 10px;
-    padding: 20px;
-  }
+  margin: 10px;
+  padding: 20px;
+}
