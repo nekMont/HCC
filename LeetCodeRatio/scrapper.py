@@ -5,14 +5,42 @@ from selenium.webdriver.common.keys import Keys
 import csv
 
 CHROMEDRIVER_PATH = r"./driver/chromedriver.exe"
-
-driver = webdriver.Chrome(CHROMEDRIVER_PATH)
-
+options = webdriver.ChromeOptions()
+options.add_argument('--disable-blink-features=AutomationControlled')
+options.add_argument("--disable-extensions")
+options.add_experimental_option('useAutomationExtension', False)
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+driver = webdriver.Chrome(CHROMEDRIVER_PATH,options=options)
+#driver = uc.Chrome()
+driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 num_of_pages = 2
 ch = ' '
 baseurl = 'https://leetcode.com/problems/'
 e = []
 print_header = False
+
+usr = "CS482HCI"
+pssd = "U5zveQ_#G2QvYVu"
+
+#######################################sign in#################################################
+driver.get("https://leetcode.com/problemset/all/")
+button = driver.find_element(By.XPATH, '//*[@id="__next"]/div/nav/div[1]/div/div[3]/div/a[2]')
+button.click()
+time.sleep(2)
+
+username_field = driver.find_element(By.ID, "id_login")
+password_field = driver.find_element(By.ID, "id_password")
+username_field.send_keys(usr)
+password_field.send_keys(pssd)
+
+time.sleep(2)
+
+button1 = driver.find_element(By.XPATH, '//*[@id="signin_btn"]/div')
+button1.click()
+
+time.sleep(2)
+
+##############################################################################################
 
 #do this for desired page numbers
 for pagenum in range(1,num_of_pages):
@@ -33,6 +61,7 @@ question_dislikes = []
 question_tittle = []
 question_acceptance = []
 question_difficulty = []
+question_companies = []
 formated_tittle = []
 count = 0
 
@@ -80,20 +109,28 @@ for x in range(0,num_of_questions):
     questionurl = baseurl + str(formated_tittle[x])
     question_link.append(questionurl)
     driver.get(questionurl)
-    time.sleep(2)
+    time.sleep(3)
     #open url and find xpath infromation, again I have a delay becvasue data doesnt load propely if i dont
-    like = driver.find_elements(By.XPATH, '//*[@id="app"]/div/div[2]/div[1]/div/div[1]/div/div[1]/div[1]/div/div[2]/div/div[1]/div[2]/button[1]/span')
-    dislike = driver.find_elements(By.XPATH, '//*[@id="app"]/div/div[2]/div[1]/div/div[1]/div/div[1]/div[1]/div/div[2]/div/div[1]/div[2]/button[2]/span')
+    like = driver.find_elements(By.XPATH, '//*[@id="qd-content"]/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[1]/div[2]')
+    #print(like)
+    dislike = driver.find_elements(By.XPATH, '//*[@id="qd-content"]/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div[2]/div/div[2]/div[2]')
+    #print(dislike)
+    company = driver.find_elements(By.XPATH, '//*[@id="qd-content"]/div[1]/div/div/div/div[2]/div/div/div[2]/div/div')
+    #print(company)
     question_likes.append(like[0].text)
     question_dislikes.append(dislike[0].text)
+    question_companies.append(company[0].text)
     print("question " + str(x) + " Success")
+    time.sleep(2)
+    
 
+question_companies = [sub.replace('\n', ',') for sub in question_companies]
+#print(question_companies)
     
 ####################################################################################################
 #csv file
 
-
-header = ['question name', 'acceptance', 'difficulty', 'likes', 'dislikes', 'link']
+header = ['question name', 'acceptance', 'difficulty', 'likes', 'dislikes', 'link', 'companies']
 
 with open ("LeetCodeRatio.csv",'w') as f:       
     f.truncate()                     
@@ -102,4 +139,4 @@ with open ("LeetCodeRatio.csv",'w') as f:
         writer.writerow(header)
         print_header = True
     writer.writerows(zip(question_tittle, question_acceptance, question_difficulty, question_likes,
-    question_dislikes, question_link)) 
+    question_dislikes, question_link, question_companies)) 
