@@ -3,6 +3,9 @@ import java.util.*;
 
 public class reader {
 
+   // set to true to enable debug printing
+   static boolean debug = false;
+
    public static void main(String args[]) throws IOException {
 
       writePopup();
@@ -25,6 +28,7 @@ public class reader {
    	String line = scan.nextLine();
    	
    	// write initial html tags
+   	pen.write("<!DOCTYPE html>\n\n");
    	pen.write("<html>\n");
    	
    	pen.write("<head>\n");
@@ -45,7 +49,7 @@ public class reader {
 	  pen.write("\t<br><br>\n");
    	
    	// create table with black background
-   	pen.write("\t<table class=\"table-sortable\" id=\"ourTable\" bgcolor=\"black\" width=\"900\">\n");
+   	pen.write("\t<table class=\"table-sortable\" id=\"ourTable\" bgcolor=\"black\" width=\"1100\">\n");
    	// create table header row
    	pen.write("\t\t<thead>\n");
    	pen.write("\t\t\t<tr bgcolor=\"#C9C0BD\">\n");
@@ -56,8 +60,9 @@ public class reader {
    	pen.write("\t\t\t\t<th width=\"100\">Likes</th>\n");
    	pen.write("\t\t\t\t<th width=\"100\">Dislikes</th>\n");
    	pen.write("\t\t\t\t<th width=\"150\">Like-Dislike Ratio</th>\n");
+   	pen.write("\t\t\t\t<th width=\"200\">Company</th>\n");
    	
-	// closing tags
+	   // closing tags
    	pen.write("\t\t\t</tr>\n");
    	pen.write("\t\t</thead>\n");
    	pen.write("\t\t<tbody>\n");
@@ -70,31 +75,44 @@ public class reader {
    	   // read a line from .csv
    	   line = scan.nextLine();
    	   // count the commas in the read line (for error cases)
-   	   int commaCount = countCommas(line);
+   	   int commaCount = 0;
+   	   //if (line.length() > 1)
+   	   commaCount = countCommas(line);
+   	   
+   	   //System.out.println(line);
    	   
    	   
-   	   if (commaCount > 1)
+   	   if (commaCount >= 1)
    	      line = line.substring(findIntegerIndex(line));
    	   
    	   // debug printing
-   	   //System.out.println(line);
+   	   if (debug)
+   	      System.out.println(line);
    	   
    	   // declare empty strings 
    	   String question = "", difficulty = "", likes = "", dislikes = "", link = "";
-   	   String likeDislikeRatio = "", number = "";
+   	   String likeDislikeRatio = "", number = "", company = "";
    	   
    	   // error cases there is a comma in the question name
-   	   if (commaCount > 5) {
-   	      count = countCommas(line) - 5;
-   	      commaCount = 5;
-   	   } // close if
+   	   //if (commaCount > 6) {
+   	      //count = countCommas(line) - 6;
+   	      //commaCount = 6;
+   	   //} // close if
    	   
    	   // process the information from a line
-   	   if (commaCount == 5) {
+   	   if (commaCount >= 6) {
    	   
    	      // grab question number
    	      number = line.substring(0,line.indexOf('.'));
    	      line = line.substring(line.indexOf(' ') + 1);
+   	      
+   	      if (number.contains("50")) {
+   	         question = line.substring(0,line.indexOf(','));
+   	         line = line.substring(line.indexOf(',') + 1);
+   	         question = question + line.substring(0,line.indexOf(','));
+   	         line = line.substring(line.indexOf(',') + 1);
+   	         count = -1;
+   	      } // close if
    	   
    	      // grab the question name store in String question
    	      while (count >= 0) {
@@ -123,12 +141,42 @@ public class reader {
    	      line = line.substring(line.indexOf(',') + 1);
    	   
    	      // grab the link
-   	      link = line;
+   	      link = line.substring(0,line.indexOf(','));
+   	      line = line.substring(line.indexOf(',') + 1);
+   	      
+   	      // grab the company name
+   	      if (line.contains("\""))
+   	         company = line.substring(line.indexOf('"')+1,line.lastIndexOf('"'));
+   	      else
+   	         company = line;
+   	      
+   	      if (debug) {
+	   	      System.out.println(number);
+	   	      System.out.println(question);
+	   	      System.out.println(difficulty);
+	   	      System.out.println(likes);
+	   	      System.out.println(dislikes);
+	   	      System.out.println(link);
+	   	      System.out.println(company);
+	   	      //System.out.println();
+   	      } // close if
+   	      
+   	      // convert numbers with xx.xk into their numerical value
+   	      if (likes.contains("K"))
+   	         likes = convertK(likes);;
+   	      if (dislikes.contains("K"))
+   	         dislikes = convertK(dislikes);
    	      
    	      // calculate the like-dislike ratio in format "xx.xx%"
    	      float ratio = Float.valueOf(likes) / (Float.valueOf(likes) + Float.valueOf(dislikes));
    	      likeDislikeRatio = String.valueOf(ratio);
-   	      likeDislikeRatio = likeDislikeRatio.substring(2,4) + "." + likeDislikeRatio.substring(4,6) + "%";
+   	      //System.out.println(likeDislikeRatio);
+   	      if (likeDislikeRatio.length() > 4)
+   	         likeDislikeRatio = likeDislikeRatio.substring(2,4) + "." + likeDislikeRatio.substring(4,6) + "%";
+   	      else if (likeDislikeRatio.length() == 3)
+   	      	likeDislikeRatio = likeDislikeRatio.substring(likeDislikeRatio.indexOf(".")+1) + "0.00%";
+   	      else
+   	      	likeDislikeRatio = likeDislikeRatio.substring(likeDislikeRatio.indexOf(".")+1) + ".00%";
    	   
    	      //create new row in table
    	      pen.write("\t\t\t<tr bgcolor=\"seashell\" align=\"center\">\n");
@@ -153,6 +201,8 @@ public class reader {
    	      pen.write("\t\t\t\t<td>" + dislikes + "</td>\n");
    	      // add like-dislike ratio cell
    	      pen.write("\t\t\t\t<td>" + likeDislikeRatio + "</td>\n");
+   	      // add company cell
+   	      pen.write("\t\t\t\t<td>" + company + "</td>\n");
    	   
    	      //  close table
    	      pen.write("\t\t\t</tr>\n");
@@ -226,5 +276,23 @@ public class reader {
    	} // close while
    
    } // close find/integerIndex
+   
+   // converts numbers from xx.xk form into numeric form
+   public static String convertK (String line) {
+   
+      int index = line.indexOf('K');
+      
+      String answer = line.substring(0,index);
+      
+      if (line.contains(".")) {
+         index = line.indexOf('.');
+      
+         answer = answer.substring(0,index) + answer.substring(index+1) + "00";
+      } // close if
+      else
+         answer = answer + "000";
+      
+      return answer;
+   } // close convertK
 
 } // close class
