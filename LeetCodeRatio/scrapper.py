@@ -161,3 +161,9 @@ with open ("LeetCodeRatio.csv",'w') as f:
         print_header = True
     writer.writerows(zip(question_tittle, question_acceptance, question_difficulty, question_likes,
     question_dislikes, question_link, question_companies)) 
+
+def main():
+    print()
+
+if  __name__ == "__main__":
+    main()
