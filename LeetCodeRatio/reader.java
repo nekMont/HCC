@@ -44,8 +44,9 @@ public class reader {
    	pen.write("<body>\n");
 
       // search bar
-	  pen.write("\t<label for=\"myInput\">Search: </label>\n");
+	  pen.write("\t<label style='color:white' for=\"myInput\">Search: </label>\n");
       pen.write("\t<input type=\"text\" id=\"myInput\" placeholder=\"Question Name\">\n");
+	  pen.write("\t<input type='text' id='myInputCompany' placeholder='Company'>\n");
 	  pen.write("\t<br><br>\n");
    	
    	// create table with black background
@@ -57,8 +58,6 @@ public class reader {
    	pen.write("\t\t\t\t<th width=\"50\">#</th>\n");
    	pen.write("\t\t\t\t<th width=\"400\">Question</th>\n");
    	pen.write("\t\t\t\t<th width=\"100\">Difficulty</th>\n");
-   	pen.write("\t\t\t\t<th width=\"100\">Likes</th>\n");
-   	pen.write("\t\t\t\t<th width=\"100\">Dislikes</th>\n");
    	pen.write("\t\t\t\t<th width=\"150\">Like-Dislike Ratio</th>\n");
    	pen.write("\t\t\t\t<th width=\"200\">Company</th>\n");
    	
@@ -168,16 +167,10 @@ public class reader {
    	         dislikes = convertK(dislikes);
    	      
    	      // calculate the like-dislike ratio in format "xx.xx%"
-   	      float ratio = Float.valueOf(likes) / (Float.valueOf(likes) + Float.valueOf(dislikes));
-   	      likeDislikeRatio = String.valueOf(ratio);
-   	      //System.out.println(likeDislikeRatio);
-   	      if (likeDislikeRatio.length() > 4)
-   	         likeDislikeRatio = likeDislikeRatio.substring(2,4) + "." + likeDislikeRatio.substring(4,6) + "%";
-   	      else if (likeDislikeRatio.length() == 3)
-   	      	likeDislikeRatio = likeDislikeRatio.substring(likeDislikeRatio.indexOf(".")+1) + "0.00%";
-   	      else
-   	      	likeDislikeRatio = likeDislikeRatio.substring(likeDislikeRatio.indexOf(".")+1) + ".00%";
-   	   
+   	      float total = Float.valueOf(likes) + Float.valueOf(dislikes);
+		  float like_percentage = (Float.valueOf(likes) / (total)) * 100;
+		  float dislike_percentage = (Float.valueOf(dislikes) / (total)) * 100;
+
    	      //create new row in table
    	      pen.write("\t\t\t<tr bgcolor=\"seashell\" align=\"center\">\n");
    	      
@@ -189,18 +182,22 @@ public class reader {
    	   
    	      // add difficulty cell with color!
    	      if (difficulty.contains("Easy"))
-   	         pen.write("\t\t\t\t<td style=\"color:MediumSeaGreen;\">" + difficulty + "</td>\n");
+   	         pen.write("\t\t\t\t<td style=\"color:MediumSeaGreen;\"> <img src='/images/" + difficulty + ".png'>" + difficulty + "</td>\n");
    	      else if (difficulty.contains("Medium"))
-   	   	   pen.write("\t\t\t\t<td style=\"color:Orange;\">" + difficulty + "</td>\n");
+   	   	   pen.write("\t\t\t\t<td style=\"color:Orange;\"> <img src='/images/" + difficulty + ".png'>" + difficulty + "</td>\n");
    	      else 
-   	   	   pen.write("\t\t\t\t<td style=\"color:Tomato;\">" + difficulty + "</td>\n");
+   	   	   pen.write("\t\t\t\t<td style=\"color:Tomato;\"> <img src='/images/" + difficulty + ".png'>" + difficulty + "</td>\n");
    	   
-   	      // add like cell
-   	      pen.write("\t\t\t\t<td>" + likes + "</td>\n");
-   	      // add dislike cell
-   	      pen.write("\t\t\t\t<td>" + dislikes + "</td>\n");
-   	      // add like-dislike ratio cell
-   	      pen.write("\t\t\t\t<td>" + likeDislikeRatio + "</td>\n");
+   	      // add like bar
+   	      pen.write("\t\t\t\t<td>\n\t\t\t\t<div id='likes' style='height:5px; width:" + like_percentage + "%;background:green;float:left;'></div>\n");
+		  // add dislike bar
+		  pen.write("\t\t\t\t<div id='dislikes' style='height:5px; width:" + dislike_percentage + "%;background:red;float:right;'></div>\n");
+		  // add like counter
+		  pen.write("\t\t\t\t<div id='like' style='color:black;font-size:12px;float:left;'>likes: "+ likes +" </div>\n");
+		  // add dislike counter
+		  pen.write("\t\t\t\t<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: " + dislikes + "</div>\n\t\t\t\t</td>\n");
+
+        
    	      // add company cell
    	      pen.write("\t\t\t\t<td>" + company + "</td>\n");
    	   

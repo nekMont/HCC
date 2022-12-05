@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import csv
 
+
 CHROMEDRIVER_PATH = r"./driver/chromedriver.exe"
 options = webdriver.ChromeOptions()
 options.add_argument('--disable-blink-features=AutomationControlled')
@@ -11,8 +12,8 @@ options.add_argument("--disable-extensions")
 options.add_experimental_option('useAutomationExtension', False)
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 driver = webdriver.Chrome(CHROMEDRIVER_PATH,options=options)
-#driver = uc.Chrome()
 driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+
 num_of_pages = 2
 ch = ' '
 baseurl = 'https://leetcode.com/problems/'
@@ -21,6 +22,26 @@ print_header = False
 
 usr = "CS482HCI"
 pssd = "U5zveQ_#G2QvYVu"
+
+
+def sign_in():
+    driver.get("https://leetcode.com/problemset/all/")
+    button = driver.find_element(By.XPATH, '//*[@id="__next"]/div/nav/div[1]/div/div[3]/div/a[2]')
+    button.click()
+    time.sleep(2)
+
+    username_field = driver.find_element(By.ID, "id_login")
+    password_field = driver.find_element(By.ID, "id_password")
+    username_field.send_keys(usr)
+    password_field.send_keys(pssd)
+
+    time.sleep(2)
+
+    button1 = driver.find_element(By.XPATH, '//*[@id="signin_btn"]/div')
+    button1.click()
+
+    time.sleep(2)
+
 
 #######################################sign in#################################################
 driver.get("https://leetcode.com/problemset/all/")

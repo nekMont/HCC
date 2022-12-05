@@ -3,6 +3,7 @@
 //object.addEventListener("click", redirect);
 
 document.getElementById("myInput").addEventListener("keyup",tableSearch);
+document.getElementById("myInputCompany").addEventListener("keyup",CompanySearch);
 
 /**
  * Sorts the HTML table
@@ -123,6 +124,33 @@ function tableSearch() {
    for (let i = 0; i < tr.length; i++) {
 
       td = tr[i].getElementsByTagName("td")[1];
+
+      if (td) {
+         txtValue = td.textContent || td.innerText;
+         if(txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+         }
+         else {
+            tr[i].style.display = "none";
+         }
+      }
+
+   } // close for
+
+} // close tableSearch
+
+function CompanySearch() {
+   let input, filter, table, tr, td, txtValue;
+
+   // initialize variables
+   input = document.getElementById("myInputCompany");
+   filter = input.value.toUpperCase();
+   table = document.getElementById("ourTable");
+   tr = table.getElementsByTagName("tr");
+
+   for (let i = 0; i < tr.length; i++) {
+
+      td = tr[i].getElementsByTagName("td")[4];
 
       if (td) {
          txtValue = td.textContent || td.innerText;
