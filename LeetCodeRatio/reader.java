@@ -18,19 +18,21 @@ public class reader {
    
    try {
    
-      // declare file to be the webscrapped info
+    // declare file to be the webscrapped info
    	File f = new File("LeetCodeRatio.csv");
+
    	// declare scanner to look at data file
    	Scanner scan = new Scanner(f);
+
    	// declare pen to write to html file
    	FileWriter pen = new FileWriter("popup.html");
+
    	// read in the first line (headers) from .csv
    	String line = scan.nextLine();
    	
    	// write initial html tags
    	pen.write("<!DOCTYPE html>\n\n");
    	pen.write("<html>\n");
-   	
    	pen.write("<head>\n");
    	
    	// set title for tab
@@ -39,48 +41,42 @@ public class reader {
    	// link html to css file
    	pen.write("\t<link rel=\"stylesheet\" href=\"./popup.css\">\n");
    	
-   	// formal html tags
+   	// opening html tags
    	pen.write("</head>\n\n");
    	pen.write("<body>\n");
 
-      // search bar
-	  pen.write("\t<label style='color:white' for=\"myInput\">Search: </label>\n");
-      pen.write("\t<input type=\"text\" id=\"myInput\" placeholder=\"Question Name\">\n");
-	  pen.write("\t<input type='text' id='myInputCompany' placeholder='Company'>\n");
-	  pen.write("\t<br><br>\n");
+    // search bars
+	pen.write("\t<label style='color:white' for=\"myInput\">Search: </label>\n");
+    pen.write("\t<input type=\"text\" id=\"myInput\" placeholder=\"Question Name\">\n");
+	pen.write("\t<input type='text' id='myInputCompany' placeholder='Company'>\n");
+	pen.write("\t<br><br>\n");
    	
    	// create table with black background
-   	pen.write("\t<table class=\"table-sortable\" id=\"ourTable\" bgcolor=\"black\" width=\"1100\">\n");
+   	pen.write("\t<table class=\"table-sortable\" id=\"ourTable\" bgcolor=\"black\" width=\"900\">\n");
    	// create table header row
    	pen.write("\t\t<thead>\n");
    	pen.write("\t\t\t<tr bgcolor=\"#C9C0BD\">\n");
    	// add colomun headers to table
    	pen.write("\t\t\t\t<th width=\"50\">#</th>\n");
-   	pen.write("\t\t\t\t<th width=\"400\">Question</th>\n");
+   	pen.write("\t\t\t\t<th width=\"350\">Question</th>\n");
    	pen.write("\t\t\t\t<th width=\"100\">Difficulty</th>\n");
-   	pen.write("\t\t\t\t<th width=\"150\">Like-Dislike Ratio</th>\n");
+   	pen.write("\t\t\t\t<th width=\"200\">Like-Dislike Ratio</th>\n");
    	pen.write("\t\t\t\t<th width=\"200\">Company</th>\n");
    	
-	   // closing tags
+	// closing tags
    	pen.write("\t\t\t</tr>\n");
    	pen.write("\t\t</thead>\n");
    	pen.write("\t\t<tbody>\n");
    	
-   	// while there is stuff to read from .csv
+   	// read in everything from .csv file
    	while (scan.hasNext()) {
    	
-   	   // variable to handle error cases
-   	   int count = 0;
    	   // read a line from .csv
    	   line = scan.nextLine();
    	   // count the commas in the read line (for error cases)
-   	   int commaCount = 0;
-   	   //if (line.length() > 1)
-   	   commaCount = countCommas(line);
+   	   int commaCount = countCommas(line);
    	   
-   	   //System.out.println(line);
-   	   
-   	   
+	   // line contains information
    	   if (commaCount >= 1)
    	      line = line.substring(findIntegerIndex(line));
    	   
@@ -92,38 +88,17 @@ public class reader {
    	   String question = "", difficulty = "", likes = "", dislikes = "", link = "";
    	   String likeDislikeRatio = "", number = "", company = "";
    	   
-   	   // error cases there is a comma in the question name
-   	   //if (commaCount > 6) {
-   	      //count = countCommas(line) - 6;
-   	      //commaCount = 6;
-   	   //} // close if
-   	   
    	   // process the information from a line
    	   if (commaCount >= 6) {
    	   
    	      // grab question number
    	      number = line.substring(0,line.indexOf('.'));
    	      line = line.substring(line.indexOf(' ') + 1);
-   	      
-   	      if (number.contains("50")) {
-   	         question = line.substring(0,line.indexOf(','));
-   	         line = line.substring(line.indexOf(',') + 1);
-   	         question = question + line.substring(0,line.indexOf(','));
-   	         line = line.substring(line.indexOf(',') + 1);
-   	         count = -1;
-   	      } // close if
-   	   
-   	      // grab the question name store in String question
-   	      while (count >= 0) {
-   	         question = question + line.substring(0,line.indexOf(','));
-   	         line = line.substring(line.indexOf(',') + 1);
-   	         count--;
-   	      } // close while
-   	      
-   	      //System.out.println(number);
 
-   	      // grab the acceptance percentage
-   	      //acceptance = line.substring(0,line.indexOf(','));
+   	      // grab the question name store in String question
+   	      question = question + line.substring(0,line.indexOf(','));
+   	      line = line.substring(line.indexOf(',') + 1);
+
    	      // filter out the acceptance percentage from string
    	      line = line.substring(line.indexOf(',') + 1);
    	   
@@ -149,6 +124,7 @@ public class reader {
    	      else
    	         company = line;
    	      
+		  // debug printing
    	      if (debug) {
 	   	      System.out.println(number);
 	   	      System.out.println(question);
@@ -157,7 +133,6 @@ public class reader {
 	   	      System.out.println(dislikes);
 	   	      System.out.println(link);
 	   	      System.out.println(company);
-	   	      //System.out.println();
    	      } // close if
    	      
    	      // convert numbers with xx.xk into their numerical value
@@ -187,17 +162,25 @@ public class reader {
    	   	   pen.write("\t\t\t\t<td style=\"color:Orange;\"> <img src='/images/" + difficulty + ".png'>" + difficulty + "</td>\n");
    	      else 
    	   	   pen.write("\t\t\t\t<td style=\"color:Tomato;\"> <img src='/images/" + difficulty + ".png'>" + difficulty + "</td>\n");
+
+		  // closing cell tag
+		  pen.write("\t\t\t\t<td>\n");
+
+          // calculate ratio of likes to dislikes
+		  float ratio = (Float.valueOf(likes) + Float.valueOf(dislikes));
+		  ratio = Float.valueOf(likes) / ratio;
+		  // write ratio into html as hidden element, used for sorting
+		  pen.write("\t\t\t\t\t<span id='ratio' hidden>" + ratio + "</span>\n");
    	   
    	      // add like bar
-   	      pen.write("\t\t\t\t<td>\n\t\t\t\t<div id='likes' style='height:5px; width:" + like_percentage + "%;background:green;float:left;'></div>\n");
+   	      pen.write("\t\t\t\t\t<div id='likes' style='height:5px; width:" + like_percentage + "%;background:green;float:left;'></div>\n");
 		  // add dislike bar
-		  pen.write("\t\t\t\t<div id='dislikes' style='height:5px; width:" + dislike_percentage + "%;background:red;float:right;'></div>\n");
+		  pen.write("\t\t\t\t\t<div id='dislikes' style='height:5px; width:" + dislike_percentage + "%;background:red;float:right;'></div>\n");
 		  // add like counter
-		  pen.write("\t\t\t\t<div id='like' style='color:black;font-size:12px;float:left;'>likes: "+ likes +" </div>\n");
+		  pen.write("\t\t\t\t\t<div id='like' style='color:black;font-size:12px;float:left;'>likes: "+ likes +" </div>\n");
 		  // add dislike counter
-		  pen.write("\t\t\t\t<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: " + dislikes + "</div>\n\t\t\t\t</td>\n");
+		  pen.write("\t\t\t\t\t<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: " + dislikes + "</div>\n\t\t\t\t</td>\n");
 
-        
    	      // add company cell
    	      pen.write("\t\t\t\t<td>" + company + "</td>\n");
    	   
@@ -231,7 +214,7 @@ public class reader {
       // exit main
       return;
    
-   }
+   } // close catch
    
    } // close writePopup
    
@@ -242,6 +225,7 @@ public class reader {
       
       while (line != "") {
       
+	     // comma found
          if (line.contains(",")) {
          
             line = line.substring(line.indexOf(',') + 1);
@@ -249,6 +233,7 @@ public class reader {
          
          } // close if
          
+		 // no comma fomund
          else
             line = "";
       
@@ -263,6 +248,7 @@ public class reader {
    
       int count = 0;
    
+    // run until an integer is found
    	while (true) {
    	
    	   if (line.charAt(count) >= '0' && line.charAt(count) <= '9')
@@ -277,15 +263,17 @@ public class reader {
    // converts numbers from xx.xk form into numeric form
    public static String convertK (String line) {
    
+      // remove K from input
       int index = line.indexOf('K');
-      
       String answer = line.substring(0,index);
       
+	  // input contains decimal
       if (line.contains(".")) {
          index = line.indexOf('.');
-      
          answer = answer.substring(0,index) + answer.substring(index+1) + "00";
       } // close if
+
+	  // input does not contain decimal
       else
          answer = answer + "000";
       

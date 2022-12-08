@@ -1,7 +1,4 @@
-// i don't know what this does but i (Jason) could not get the
-// search and sorting to work with it. 
-//object.addEventListener("click", redirect);
-
+// Listen to serach bar, call functions when user types into search bars 
 document.getElementById("myInput").addEventListener("keyup",tableSearch);
 document.getElementById("myInputCompany").addEventListener("keyup",CompanySearch);
 
@@ -14,26 +11,25 @@ document.getElementById("myInputCompany").addEventListener("keyup",CompanySearch
  */
 function sortByColumn(table, colum, asc = true) {
 
-   const dirModifier = asc ? 1: -1; //check if ascending
+   //check if ascending
+   const dirModifier = asc ? 1: -1; 
+   // select the first table body block in HTML file
    const tBody = table.tBodies[0];
-   const rows = Array.from(tBody.querySelectorAll("tr")); //selects every table row, gets an array of tr instead of node list 
+   //selects every table row, gets an array of tr instead of node list 
+   const rows = Array.from(tBody.querySelectorAll("tr")); 
 
    //sort each row 
    const sortedRow = rows.sort((a,b) => {
 
-      // string sorting (question name and ratio)
-      if (colum == 1 || colum == 5) {
+      // string sorting (question name and companies)
+      if (colum == 1 || colum == 4) {
 
          const aColText = a.querySelector(`td:nth-child(${colum + 1})`).textContent.trim();
          const bColText = b.querySelector(`td:nth-child(${colum + 1})`).textContent.trim();
 
-         if (colum == 5) 
-            return aColText > bColText ? (-1 * dirModifier) : (1 * dirModifier);
-
-         // sort for question name and ratio
          return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
 
-      }
+      } // close if
 
       //  difficulty sorting
       else if (colum == 2) {
@@ -61,26 +57,29 @@ function sortByColumn(table, colum, asc = true) {
          else (aColText.localeCompare("Medium") == 0 && bColText.localeCompare("Hard") == 0)
             return -1 * dirModifier;
 
-      }
+      } // close else if
 
-      // number sorting
-      else {
+      // question number sorting
+      else if (colum == 0){
 
          const aColPrice = parseFloat(a.querySelector(`td:nth-child(${colum + 1})`).textContent);
          const bColPrice = parseFloat(b.querySelector(`td:nth-child(${colum + 1})`).textContent);
 
-         if (colum == 0)
-            // sorting for question #
-            return aColPrice > bColPrice ? (1 * dirModifier) : (-1 * dirModifier);
+         return aColPrice > bColPrice ? (1 * dirModifier) : (-1 * dirModifier);
          
-         else
-            // sorting for likes, dislikes
-            return aColPrice > bColPrice ? (-1 * dirModifier) : (1 * dirModifier);
+      } // close else if
 
-      }
+      // like dislike sorting
+      else {
 
-         
-   });
+         const aColPrice = a.querySelector(`td:nth-child(${colum + 1})`).textContent;
+         const bColPrice = b.querySelector(`td:nth-child(${colum + 1})`).textContent;
+
+         return aColPrice > bColPrice ? (-1 * dirModifier) : (1 * dirModifier);
+
+      } // close else
+
+   }); // close sortedRow
 
    // remove all existing TRs from the table
    while (tBody.firstChild) {
@@ -90,7 +89,7 @@ function sortByColumn(table, colum, asc = true) {
    // re-add the newly sorted rows
    tBody.append(...sortedRow);
 
-   //remember how the col is currently sorted 
+   //remember how the colum is currently sorted 
    table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc")); 
    table.querySelector(`th:nth-child(${colum + 1})`).classList.toggle("th-sort-asc", asc);
    table.querySelector(`th:nth-child(${colum + 1})`).classList.toggle("th-sort-desc", !asc);
@@ -111,8 +110,9 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
 
 
 // Enables search feature to find a specific question by name
-// followed tutorial by british guy: https://www.youtube.com/watch?v=eLQhybnA9hw&t=619s
+// https://www.youtube.com/watch?v=eLQhybnA9hw&t=619s reference YT video 
 function tableSearch() {
+
    let input, filter, table, tr, td, txtValue;
 
    // initialize variables
@@ -121,24 +121,31 @@ function tableSearch() {
    table = document.getElementById("ourTable");
    tr = table.getElementsByTagName("tr");
 
+   // for each row in the table
    for (let i = 0; i < tr.length; i++) {
 
+      // grab the table data 
       td = tr[i].getElementsByTagName("td")[1];
 
       if (td) {
+
          txtValue = td.textContent || td.innerText;
+         
          if(txtValue.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";
          }
+
          else {
             tr[i].style.display = "none";
          }
-      }
+      } // close if
 
    } // close for
 
 } // close tableSearch
 
+// Enables search feature to find a specific company by name
+// https://www.youtube.com/watch?v=eLQhybnA9hw&t=619s reference YT video 
 function CompanySearch() {
    let input, filter, table, tr, td, txtValue;
 
@@ -148,19 +155,24 @@ function CompanySearch() {
    table = document.getElementById("ourTable");
    tr = table.getElementsByTagName("tr");
 
+   // for each row in the table
    for (let i = 0; i < tr.length; i++) {
 
+      // grab the table data
       td = tr[i].getElementsByTagName("td")[4];
 
       if (td) {
+
          txtValue = td.textContent || td.innerText;
+
          if(txtValue.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";
          }
+
          else {
             tr[i].style.display = "none";
          }
-      }
+      } // close if
 
    } // close for
 

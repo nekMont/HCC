@@ -4,28 +4,20 @@
 <head>
 	<title>Like to Dislike Ratio!</title>
 	<link rel="stylesheet" href="./popup.css">
-
 </head>
 
-
 <body>
-	<div class = "togg">
-		<input type= "checkbox" id = "darkmode-toggle" />
-		<label for = "darkmode-toggle"></label>
-	</div>
-	<label style='color:black' for="myInput">Search: </label>
+	<label style='color:white' for="myInput">Search: </label>
 	<input type="text" id="myInput" placeholder="Question Name">
 	<input type='text' id='myInputCompany' placeholder='Company'>
-
 	<br><br>
-	<table class="table-sortable" id="ourTable" bgcolor="black" width="1100">
-		
+	<table class="table-sortable" id="ourTable" bgcolor="black" width="900">
 		<thead>
 			<tr bgcolor="#C9C0BD">
 				<th width="50">#</th>
-				<th width="400">Question</th>
+				<th width="350">Question</th>
 				<th width="100">Difficulty</th>
-				<th width="150">Like-Dislike Ratio</th>
+				<th width="200">Like-Dislike Ratio</th>
 				<th width="200">Company</th>
 			</tr>
 		</thead>
@@ -35,10 +27,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/find-players-with-zero-or-one-losses" target='_blank' rel='noopener noreferrwe'>Find Players With Zero or One Losses</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:91.9598%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:8.040201%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 549 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 48</div>
+					<span id='ratio' hidden>0.919598</span>
+					<div id='likes' style='height:5px; width:91.9598%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:8.040201%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 549 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 48</div>
 				</td>
 				<td>Indeed</td>
 			</tr>
@@ -47,10 +40,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/two-sum" target='_blank' rel='noopener noreferrwe'>Two Sum</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:96.89738%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:3.1026254%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 40600 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1300</div>
+					<span id='ratio' hidden>0.96897376</span>
+					<div id='likes' style='height:5px; width:96.89738%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:3.1026254%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 40600 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1300</div>
 				</td>
 				<td>Amazon,Adobe,Apple</td>
 			</tr>
@@ -59,10 +53,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/add-two-numbers" target='_blank' rel='noopener noreferrwe'>Add Two Numbers</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:83.94161%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:16.058393%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 23000 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 4400</div>
+					<span id='ratio' hidden>0.8394161</span>
+					<div id='likes' style='height:5px; width:83.94161%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:16.058393%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 23000 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 4400</div>
 				</td>
 				<td>Amazon,Apple,Adobe</td>
 			</tr>
@@ -71,10 +66,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters" target='_blank' rel='noopener noreferrwe'>Longest Substring Without Repeating Characters</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:95.91195%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:4.0880504%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 30500 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1300</div>
+					<span id='ratio' hidden>0.9591195</span>
+					<div id='likes' style='height:5px; width:95.91195%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:4.0880504%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 30500 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1300</div>
 				</td>
 				<td>Amazon,Bloomberg,Microsoft</td>
 			</tr>
@@ -83,10 +79,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/median-of-two-sorted-arrays" target='_blank' rel='noopener noreferrwe'>Median of Two Sorted Arrays</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:89.655174%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:10.344828%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 20800 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 2400</div>
+					<span id='ratio' hidden>0.8965517</span>
+					<div id='likes' style='height:5px; width:89.655174%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:10.344828%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 20800 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 2400</div>
 				</td>
 				<td>Amazon,Apple,Microsoft</td>
 			</tr>
@@ -95,10 +92,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/longest-palindromic-substring" target='_blank' rel='noopener noreferrwe'>Longest Palindromic Substring</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:94.60581%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:5.394191%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 22800 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1300</div>
+					<span id='ratio' hidden>0.9460581</span>
+					<div id='likes' style='height:5px; width:94.60581%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:5.394191%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 22800 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1300</div>
 				</td>
 				<td>Amazon,Microsoft,Google</td>
 			</tr>
@@ -107,10 +105,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/zigzag-conversion" target='_blank' rel='noopener noreferrwe'>Zigzag Conversion</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:31.543625%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:68.456375%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 4700 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 10200</div>
+					<span id='ratio' hidden>0.31543624</span>
+					<div id='likes' style='height:5px; width:31.543625%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:68.456375%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 4700 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 10200</div>
 				</td>
 				<td>Amazon,Yahoo,Apple</td>
 			</tr>
@@ -119,10 +118,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/reverse-integer" target='_blank' rel='noopener noreferrwe'>Reverse Integer</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:45.049507%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:54.950493%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 9100 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 11100</div>
+					<span id='ratio' hidden>0.45049506</span>
+					<div id='likes' style='height:5px; width:45.049507%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:54.950493%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 9100 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 11100</div>
 				</td>
 				<td>Amazon,Apple,Adobe</td>
 			</tr>
@@ -131,10 +131,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/string-to-integer-atoi" target='_blank' rel='noopener noreferrwe'>String to Integer (atoi)</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:25.490198%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:74.5098%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 2600 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 7600</div>
+					<span id='ratio' hidden>0.25490198</span>
+					<div id='likes' style='height:5px; width:25.490198%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:74.5098%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 2600 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 7600</div>
 				</td>
 				<td>Amazon,Microsoft,Apple</td>
 			</tr>
@@ -143,10 +144,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/palindrome-number" target='_blank' rel='noopener noreferrwe'>Palindrome Number</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:76.69903%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:23.300972%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 7900 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 2400</div>
+					<span id='ratio' hidden>0.7669903</span>
+					<div id='likes' style='height:5px; width:76.69903%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:23.300972%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 7900 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 2400</div>
 				</td>
 				<td>Amazon,Google,tcs</td>
 			</tr>
@@ -155,10 +157,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/regular-expression-matching" target='_blank' rel='noopener noreferrwe'>Regular Expression Matching</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:85.71429%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:14.285715%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 9600 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1600</div>
+					<span id='ratio' hidden>0.85714287</span>
+					<div id='likes' style='height:5px; width:85.71429%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:14.285715%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 9600 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1600</div>
 				</td>
 				<td>Amazon,Microsoft,Google</td>
 			</tr>
@@ -167,10 +170,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/container-with-most-water" target='_blank' rel='noopener noreferrwe'>Container With Most Water</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:95.111115%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:4.888889%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 21400 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1100</div>
+					<span id='ratio' hidden>0.95111114</span>
+					<div id='likes' style='height:5px; width:95.111115%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:4.888889%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 21400 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1100</div>
 				</td>
 				<td>Amazon,Apple,Google</td>
 			</tr>
@@ -179,10 +183,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/integer-to-roman" target='_blank' rel='noopener noreferrwe'>Integer to Roman</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:50.0%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:50.0%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 4900 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 4900</div>
+					<span id='ratio' hidden>0.5</span>
+					<div id='likes' style='height:5px; width:50.0%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:50.0%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 4900 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 4900</div>
 				</td>
 				<td>Amazon,Google,Bloomberg</td>
 			</tr>
@@ -191,10 +196,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/roman-to-integer" target='_blank' rel='noopener noreferrwe'>Roman to Integer</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:94.5136%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:5.486399%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 8200 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 476</div>
+					<span id='ratio' hidden>0.945136</span>
+					<div id='likes' style='height:5px; width:94.5136%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:5.486399%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 8200 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 476</div>
 				</td>
 				<td>Amazon,Adobe,Apple</td>
 			</tr>
@@ -203,10 +209,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/longest-common-prefix" target='_blank' rel='noopener noreferrwe'>Longest Common Prefix</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:76.666664%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:23.333334%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 11500 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 3500</div>
+					<span id='ratio' hidden>0.76666665</span>
+					<div id='likes' style='height:5px; width:76.666664%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:23.333334%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 11500 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 3500</div>
 				</td>
 				<td>Amazon,Apple,Google</td>
 			</tr>
@@ -215,10 +222,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/3sum" target='_blank' rel='noopener noreferrwe'>3Sum</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:91.53226%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:8.467742%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 22700 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 2100</div>
+					<span id='ratio' hidden>0.9153226</span>
+					<div id='likes' style='height:5px; width:91.53226%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:8.467742%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 22700 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 2100</div>
 				</td>
 				<td>Amazon,Apple,Adobe</td>
 			</tr>
@@ -227,10 +235,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/3sum-closest" target='_blank' rel='noopener noreferrwe'>3Sum Closest</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:94.77577%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:5.2242255%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 8200 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 452</div>
+					<span id='ratio' hidden>0.9477577</span>
+					<div id='likes' style='height:5px; width:94.77577%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:5.2242255%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 8200 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 452</div>
 				</td>
 				<td>Amazon,Adobe,Facebook</td>
 			</tr>
@@ -239,10 +248,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number" target='_blank' rel='noopener noreferrwe'>Letter Combinations of a Phone Number</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:94.466934%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:5.5330634%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13300 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 779</div>
+					<span id='ratio' hidden>0.94466937</span>
+					<div id='likes' style='height:5px; width:94.466934%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:5.5330634%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13300 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 779</div>
 				</td>
 				<td>Amazon,Microsoft,Google</td>
 			</tr>
@@ -251,10 +261,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/4sum" target='_blank' rel='noopener noreferrwe'>4Sum</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:89.62728%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:10.372719%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 8200 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 949</div>
+					<span id='ratio' hidden>0.89627284</span>
+					<div id='likes' style='height:5px; width:89.62728%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:10.372719%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 8200 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 949</div>
 				</td>
 				<td>Amazon,Apple,Facebook</td>
 			</tr>
@@ -263,10 +274,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list" target='_blank' rel='noopener noreferrwe'>Remove Nth Node From End of List</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:96.00774%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:3.992264%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13900 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 578</div>
+					<span id='ratio' hidden>0.96007735</span>
+					<div id='likes' style='height:5px; width:96.00774%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:3.992264%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13900 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 578</div>
 				</td>
 				<td>Amazon,Facebook,Apple</td>
 			</tr>
@@ -275,10 +287,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/valid-parentheses" target='_blank' rel='noopener noreferrwe'>Valid Parentheses</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:95.08805%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:4.911945%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 16900 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 873</div>
+					<span id='ratio' hidden>0.9508805</span>
+					<div id='likes' style='height:5px; width:95.08805%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:4.911945%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 16900 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 873</div>
 				</td>
 				<td>Amazon,BlackRock,Bloomberg</td>
 			</tr>
@@ -287,10 +300,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/merge-two-sorted-lists" target='_blank' rel='noopener noreferrwe'>Merge Two Sorted Lists</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:92.0%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:8.0%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 16100 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1400</div>
+					<span id='ratio' hidden>0.92</span>
+					<div id='likes' style='height:5px; width:92.0%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:8.0%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 16100 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1400</div>
 				</td>
 				<td>Amazon,Apple,Google</td>
 			</tr>
@@ -299,10 +313,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/generate-parentheses" target='_blank' rel='noopener noreferrwe'>Generate Parentheses</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:96.263084%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:3.7369206%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 16100 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 625</div>
+					<span id='ratio' hidden>0.9626308</span>
+					<div id='likes' style='height:5px; width:96.263084%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:3.7369206%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 16100 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 625</div>
 				</td>
 				<td>Amazon,Bloomberg,Adobe</td>
 			</tr>
@@ -311,10 +326,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/merge-k-sorted-lists" target='_blank' rel='noopener noreferrwe'>Merge k Sorted Lists</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:96.37775%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:3.622251%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 14900 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 560</div>
+					<span id='ratio' hidden>0.9637775</span>
+					<div id='likes' style='height:5px; width:96.37775%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:3.622251%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 14900 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 560</div>
 				</td>
 				<td>Amazon,Facebook,Apple</td>
 			</tr>
@@ -323,10 +339,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/swap-nodes-in-pairs" target='_blank' rel='noopener noreferrwe'>Swap Nodes in Pairs</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:96.19687%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:3.803132%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 8600 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 340</div>
+					<span id='ratio' hidden>0.96196866</span>
+					<div id='likes' style='height:5px; width:96.19687%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:3.803132%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 8600 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 340</div>
 				</td>
 				<td>Adobe,Microsoft,Amazon</td>
 			</tr>
@@ -335,10 +352,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/reverse-nodes-in-k-group" target='_blank' rel='noopener noreferrwe'>Reverse Nodes in k-Group</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:94.624916%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:5.3750854%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 9700 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 551</div>
+					<span id='ratio' hidden>0.9462491</span>
+					<div id='likes' style='height:5px; width:94.624916%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:5.3750854%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 9700 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 551</div>
 				</td>
 				<td>Amazon,Microsoft,Apple</td>
 			</tr>
@@ -347,10 +365,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array" target='_blank' rel='noopener noreferrwe'>Remove Duplicates from Sorted Array</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:41.89189%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:58.10811%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 9300 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 12900</div>
+					<span id='ratio' hidden>0.4189189</span>
+					<div id='likes' style='height:5px; width:41.89189%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:58.10811%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 9300 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 12900</div>
 				</td>
 				<td>Apple,Amazon,Adobe</td>
 			</tr>
@@ -359,10 +378,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/remove-element" target='_blank' rel='noopener noreferrwe'>Remove Element</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:42.477875%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:57.522125%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 4800 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 6500</div>
+					<span id='ratio' hidden>0.42477876</span>
+					<div id='likes' style='height:5px; width:42.477875%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:57.522125%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 4800 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 6500</div>
 				</td>
 				<td>Amazon,Apple,Facebook</td>
 			</tr>
@@ -371,10 +391,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string" target='_blank' rel='noopener noreferrwe'>Find the Index of the First Occurrence in a String</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:92.63682%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:7.363184%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 931 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 74</div>
+					<span id='ratio' hidden>0.9263682</span>
+					<div id='likes' style='height:5px; width:92.63682%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:7.363184%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 931 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 74</div>
 				</td>
 				<td>Amazon,Bloomberg,Google</td>
 			</tr>
@@ -383,10 +404,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/divide-two-integers" target='_blank' rel='noopener noreferrwe'>Divide Two Integers</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:23.27044%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:76.72956%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 3700 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 12200</div>
+					<span id='ratio' hidden>0.2327044</span>
+					<div id='likes' style='height:5px; width:23.27044%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:76.72956%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 3700 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 12200</div>
 				</td>
 				<td>Google,Amazon,Facebook</td>
 			</tr>
@@ -395,10 +417,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/substring-with-concatenation-of-all-words" target='_blank' rel='noopener noreferrwe'>Substring with Concatenation of All Words</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:94.2928%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:5.707196%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 380 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 23</div>
+					<span id='ratio' hidden>0.942928</span>
+					<div id='likes' style='height:5px; width:94.2928%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:5.707196%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 380 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 23</div>
 				</td>
 				<td>Apple,Amazon,Adobe</td>
 			</tr>
@@ -407,10 +430,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/next-permutation" target='_blank' rel='noopener noreferrwe'>Next Permutation</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:77.71429%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:22.285715%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13600 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 3900</div>
+					<span id='ratio' hidden>0.7771429</span>
+					<div id='likes' style='height:5px; width:77.71429%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:22.285715%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13600 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 3900</div>
 				</td>
 				<td>Amazon,Facebook,Apple</td>
 			</tr>
@@ -419,10 +443,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/longest-valid-parentheses" target='_blank' rel='noopener noreferrwe'>Longest Valid Parentheses</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:96.901085%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:3.0989158%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 10100 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 323</div>
+					<span id='ratio' hidden>0.96901083</span>
+					<div id='likes' style='height:5px; width:96.901085%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:3.0989158%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 10100 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 323</div>
 				</td>
 				<td>Amazon,Facebook,Microsoft</td>
 			</tr>
@@ -431,10 +456,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/search-in-rotated-sorted-array" target='_blank' rel='noopener noreferrwe'>Search in Rotated Sorted Array</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:94.44444%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:5.555556%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 18700 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1100</div>
+					<span id='ratio' hidden>0.9444444</span>
+					<div id='likes' style='height:5px; width:94.44444%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:5.555556%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 18700 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1100</div>
 				</td>
 				<td>Amazon,Bloomberg,Microsoft</td>
 			</tr>
@@ -443,10 +469,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array" target='_blank' rel='noopener noreferrwe'>Find First and Last Position of Element in Sorted Array</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:97.60602%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:2.3939853%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 14800 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 363</div>
+					<span id='ratio' hidden>0.97606015</span>
+					<div id='likes' style='height:5px; width:97.60602%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:2.3939853%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 14800 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 363</div>
 				</td>
 				<td>Amazon,Facebook,Bloomberg</td>
 			</tr>
@@ -455,10 +482,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/search-insert-position" target='_blank' rel='noopener noreferrwe'>Search Insert Position</a></td>
 				<td style="color:MediumSeaGreen;"> <img src='/images/Easy.png'>Easy</td>
 				<td>
-				<div id='likes' style='height:5px; width:95.518654%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:4.4813423%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 10700 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 502</div>
+					<span id='ratio' hidden>0.95518655</span>
+					<div id='likes' style='height:5px; width:95.518654%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:4.4813423%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 10700 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 502</div>
 				</td>
 				<td>Apple,Google,Amazon</td>
 			</tr>
@@ -467,10 +495,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/valid-sudoku" target='_blank' rel='noopener noreferrwe'>Valid Sudoku</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:89.93884%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:10.061158%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 7500 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 839</div>
+					<span id='ratio' hidden>0.89938843</span>
+					<div id='likes' style='height:5px; width:89.93884%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:10.061158%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 7500 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 839</div>
 				</td>
 				<td>Amazon,Apple,Karat</td>
 			</tr>
@@ -479,10 +508,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/sudoku-solver" target='_blank' rel='noopener noreferrwe'>Sudoku Solver</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:97.38453%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:2.6154702%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 7000 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 188</div>
+					<span id='ratio' hidden>0.9738453</span>
+					<div id='likes' style='height:5px; width:97.38453%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:2.6154702%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 7000 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 188</div>
 				</td>
 				<td>Amazon,Apple,Bloomberg</td>
 			</tr>
@@ -491,10 +521,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/count-and-say" target='_blank' rel='noopener noreferrwe'>Count and Say</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:32.55814%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:67.441864%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 2800 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 5800</div>
+					<span id='ratio' hidden>0.3255814</span>
+					<div id='likes' style='height:5px; width:32.55814%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:67.441864%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 2800 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 5800</div>
 				</td>
 				<td>Amazon,Google,Adobe</td>
 			</tr>
@@ -503,10 +534,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/combination-sum" target='_blank' rel='noopener noreferrwe'>Combination Sum</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:98.01891%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:1.9810865%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 14200 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 287</div>
+					<span id='ratio' hidden>0.98018914</span>
+					<div id='likes' style='height:5px; width:98.01891%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:1.9810865%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 14200 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 287</div>
 				</td>
 				<td>Airbnb,Amazon,Bloomberg</td>
 			</tr>
@@ -515,10 +547,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/combination-sum-ii" target='_blank' rel='noopener noreferrwe'>Combination Sum II</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:97.62533%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:2.37467%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 7400 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 180</div>
+					<span id='ratio' hidden>0.9762533</span>
+					<div id='likes' style='height:5px; width:97.62533%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:2.37467%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 7400 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 180</div>
 				</td>
 				<td>Airbnb,Reddit,Amazon</td>
 			</tr>
@@ -527,10 +560,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/first-missing-positive" target='_blank' rel='noopener noreferrwe'>First Missing Positive</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:89.28571%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:10.714286%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 12500 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1500</div>
+					<span id='ratio' hidden>0.89285713</span>
+					<div id='likes' style='height:5px; width:89.28571%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:10.714286%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 12500 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 1500</div>
 				</td>
 				<td>Amazon,Microsoft,Google</td>
 			</tr>
@@ -539,10 +573,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/trapping-rain-water" target='_blank' rel='noopener noreferrwe'>Trapping Rain Water</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:98.62743%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:1.3725652%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 24000 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 334</div>
+					<span id='ratio' hidden>0.98627436</span>
+					<div id='likes' style='height:5px; width:98.62743%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:1.3725652%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 24000 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 334</div>
 				</td>
 				<td>Amazon,Bloomberg,Microsoft</td>
 			</tr>
@@ -551,10 +586,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/multiply-strings" target='_blank' rel='noopener noreferrwe'>Multiply Strings</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:69.230774%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:30.769232%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 5400 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 2400</div>
+					<span id='ratio' hidden>0.6923077</span>
+					<div id='likes' style='height:5px; width:69.230774%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:30.769232%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 5400 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 2400</div>
 				</td>
 				<td>Microsoft,Google,Facebook</td>
 			</tr>
@@ -563,10 +599,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/wildcard-matching" target='_blank' rel='noopener noreferrwe'>Wildcard Matching</a></td>
 				<td style="color:Tomato;"> <img src='/images/Hard.png'>Hard</td>
 				<td>
-				<div id='likes' style='height:5px; width:95.8818%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:4.1182017%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 6100 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 262</div>
+					<span id='ratio' hidden>0.95881796</span>
+					<div id='likes' style='height:5px; width:95.8818%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:4.1182017%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 6100 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 262</div>
 				</td>
 				<td>Bloomberg,Apple,JPMorgan</td>
 			</tr>
@@ -575,10 +612,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/jump-game-ii" target='_blank' rel='noopener noreferrwe'>Jump Game II</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:96.64582%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:3.3541784%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 10200 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 354</div>
+					<span id='ratio' hidden>0.9664582</span>
+					<div id='likes' style='height:5px; width:96.64582%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:3.3541784%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 10200 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 354</div>
 				</td>
 				<td>Amazon,Google,Goldman Sachs</td>
 			</tr>
@@ -587,10 +625,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/permutations" target='_blank' rel='noopener noreferrwe'>Permutations</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:98.37468%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:1.6253209%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13800 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 228</div>
+					<span id='ratio' hidden>0.98374677</span>
+					<div id='likes' style='height:5px; width:98.37468%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:1.6253209%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13800 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 228</div>
 				</td>
 				<td>Amazon,Microsoft,Adobe</td>
 			</tr>
@@ -599,10 +638,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/permutations-ii" target='_blank' rel='noopener noreferrwe'>Permutations II</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:98.294304%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:1.7056953%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 6800 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 118</div>
+					<span id='ratio' hidden>0.98294306</span>
+					<div id='likes' style='height:5px; width:98.294304%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:1.7056953%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 6800 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 118</div>
 				</td>
 				<td>Amazon,Microsoft,Google</td>
 			</tr>
@@ -611,10 +651,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/rotate-image" target='_blank' rel='noopener noreferrwe'>Rotate Image</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:95.567154%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:4.432846%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13000 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 603</div>
+					<span id='ratio' hidden>0.95567155</span>
+					<div id='likes' style='height:5px; width:95.567154%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:4.432846%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13000 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 603</div>
 				</td>
 				<td>Amazon,Cisco,Adobe</td>
 			</tr>
@@ -623,10 +664,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/group-anagrams" target='_blank' rel='noopener noreferrwe'>Group Anagrams</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:97.143684%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:2.8563144%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13400 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 394</div>
+					<span id='ratio' hidden>0.97143686</span>
+					<div id='likes' style='height:5px; width:97.143684%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:2.8563144%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 13400 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 394</div>
 				</td>
 				<td>Amazon,Apple,Yandex</td>
 			</tr>
@@ -635,10 +677,11 @@
 				<td align="left"><a href="https://leetcode.com/problems/powx-n" target='_blank' rel='noopener noreferrwe'>Pow(x n)"</a></td>
 				<td style="color:Orange;"> <img src='/images/Medium.png'>Medium</td>
 				<td>
-				<div id='likes' style='height:5px; width:48.4375%;background:green;float:left;'></div>
-				<div id='dislikes' style='height:5px; width:51.5625%;background:red;float:right;'></div>
-				<div id='like' style='color:black;font-size:12px;float:left;'>likes: 6200 </div>
-				<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 6600</div>
+					<span id='ratio' hidden>0.484375</span>
+					<div id='likes' style='height:5px; width:48.4375%;background:green;float:left;'></div>
+					<div id='dislikes' style='height:5px; width:51.5625%;background:red;float:right;'></div>
+					<div id='like' style='color:black;font-size:12px;float:left;'>likes: 6200 </div>
+					<div id='dislike' style='color:black;font-size:12px;float:right;'>dislikes: 6600</div>
 				</td>
 				<td>Facebook,Amazon,Apple</td>
 			</tr>
