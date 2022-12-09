@@ -46,7 +46,7 @@ public class reader {
    	pen.write("<body>\n");
 
     // search bars
-	pen.write("\t<label style='color:white' for=\"myInput\">Search: </label>\n");
+	pen.write("\t<label style='color:black' for=\"myInput\">Search: </label>\n");
     pen.write("\t<input type=\"text\" id=\"myInput\" placeholder=\"Question Name\">\n");
 	pen.write("\t<input type='text' id='myInputCompany' placeholder='Company'>\n");
 	pen.write("\t<br><br>\n");

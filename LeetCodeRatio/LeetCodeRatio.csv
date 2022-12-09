@@ -1,104 +1,52 @@
-question name,acceptance,difficulty,likes,dislikes,link,companies
-
-2225. Find Players With Zero or One Losses,71.3%,Medium,549,48,https://leetcode.com/problems/find-players-with-zero-or-one-losses,Indeed
-
-1. Two Sum,49.1%,Easy,40.6K,1.3K,https://leetcode.com/problems/two-sum,"Amazon,Adobe,Apple"
-
-2. Add Two Numbers,39.9%,Medium,23K,4.4K,https://leetcode.com/problems/add-two-numbers,"Amazon,Apple,Adobe"
-
-3. Longest Substring Without Repeating Characters,33.8%,Medium,30.5K,1.3K,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Amazon,Bloomberg,Microsoft"
-
-4. Median of Two Sorted Arrays,35.3%,Hard,20.8K,2.4K,https://leetcode.com/problems/median-of-two-sorted-arrays,"Amazon,Apple,Microsoft"
-
-5. Longest Palindromic Substring,32.4%,Medium,22.8K,1.3K,https://leetcode.com/problems/longest-palindromic-substring,"Amazon,Microsoft,Google"
-
-6. Zigzag Conversion,43.2%,Medium,4.7K,10.2K,https://leetcode.com/problems/zigzag-conversion,"Amazon,Yahoo,Apple"
-
-7. Reverse Integer,27.3%,Medium,9.1K,11.1K,https://leetcode.com/problems/reverse-integer,"Amazon,Apple,Adobe"
-
-8. String to Integer (atoi),16.6%,Medium,2.6K,7.6K,https://leetcode.com/problems/string-to-integer-atoi,"Amazon,Microsoft,Apple"
-
-9. Palindrome Number,53.0%,Easy,7.9K,2.4K,https://leetcode.com/problems/palindrome-number,"Amazon,Google,tcs"
-
-10. Regular Expression Matching,28.2%,Hard,9.6K,1.6K,https://leetcode.com/problems/regular-expression-matching,"Amazon,Microsoft,Google"
-
-11. Container With Most Water,54.3%,Medium,21.4K,1.1K,https://leetcode.com/problems/container-with-most-water,"Amazon,Apple,Google"
-
-12. Integer to Roman,61.6%,Medium,4.9K,4.9K,https://leetcode.com/problems/integer-to-roman,"Amazon,Google,Bloomberg"
-
-13. Roman to Integer,58.2%,Easy,8.2K,476,https://leetcode.com/problems/roman-to-integer,"Amazon,Adobe,Apple"
-
-14. Longest Common Prefix,40.8%,Easy,11.5K,3.5K,https://leetcode.com/problems/longest-common-prefix,"Amazon,Apple,Google"
-
-15. 3Sum,32.3%,Medium,22.7K,2.1K,https://leetcode.com/problems/3sum,"Amazon,Apple,Adobe"
-
-16. 3Sum Closest,46.1%,Medium,8.2K,452,https://leetcode.com/problems/3sum-closest,"Amazon,Adobe,Facebook"
-
-17. Letter Combinations of a Phone Number,55.7%,Medium,13.3K,779,https://leetcode.com/problems/letter-combinations-of-a-phone-number,"Amazon,Microsoft,Google"
-
-18. 4Sum,36.4%,Medium,8.2K,949,https://leetcode.com/problems/4sum,"Amazon,Apple,Facebook"
-
-19. Remove Nth Node From End of List,40.1%,Medium,13.9K,578,https://leetcode.com/problems/remove-nth-node-from-end-of-list,"Amazon,Facebook,Apple"
-
-20. Valid Parentheses,40.6%,Easy,16.9K,873,https://leetcode.com/problems/valid-parentheses,"Amazon,BlackRock,Bloomberg"
-
-21. Merge Two Sorted Lists,61.9%,Easy,16.1K,1.4K,https://leetcode.com/problems/merge-two-sorted-lists,"Amazon,Apple,Google"
-
-22. Generate Parentheses,72.0%,Medium,16.1K,625,https://leetcode.com/problems/generate-parentheses,"Amazon,Bloomberg,Adobe"
-
-23. Merge k Sorted Lists,48.5%,Hard,14.9K,560,https://leetcode.com/problems/merge-k-sorted-lists,"Amazon,Facebook,Apple"
-
-24. Swap Nodes in Pairs,60.5%,Medium,8.6K,340,https://leetcode.com/problems/swap-nodes-in-pairs,"Adobe,Microsoft,Amazon"
-
-25. Reverse Nodes in k-Group,53.7%,Hard,9.7K,551,https://leetcode.com/problems/reverse-nodes-in-k-group,"Amazon,Microsoft,Apple"
-
-26. Remove Duplicates from Sorted Array,50.9%,Easy,9.3K,12.9K,https://leetcode.com/problems/remove-duplicates-from-sorted-array,"Apple,Amazon,Adobe"
-
-27. Remove Element,52.3%,Easy,4.8K,6.5K,https://leetcode.com/problems/remove-element,"Amazon,Apple,Facebook"
-
-28. Find the Index of the First Occurrence in a String,37.7%,Medium,931,74,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,"Amazon,Bloomberg,Google"
-
-29. Divide Two Integers,17.3%,Medium,3.7K,12.2K,https://leetcode.com/problems/divide-two-integers,"Google,Amazon,Facebook"
-
-30. Substring with Concatenation of All Words,30.9%,Hard,380,23,https://leetcode.com/problems/substring-with-concatenation-of-all-words,"Apple,Amazon,Adobe"
-
-31. Next Permutation,37.2%,Medium,13.6K,3.9K,https://leetcode.com/problems/next-permutation,"Amazon,Facebook,Apple"
-
-32. Longest Valid Parentheses,32.7%,Hard,10.1K,323,https://leetcode.com/problems/longest-valid-parentheses,"Amazon,Facebook,Microsoft"
-
-33. Search in Rotated Sorted Array,38.7%,Medium,18.7K,1.1K,https://leetcode.com/problems/search-in-rotated-sorted-array,"Amazon,Bloomberg,Microsoft"
-
-34. Find First and Last Position of Element in Sorted Array,41.6%,Medium,14.8K,363,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,"Amazon,Facebook,Bloomberg"
-
-35. Search Insert Position,42.1%,Easy,10.7K,502,https://leetcode.com/problems/search-insert-position,"Apple,Google,Amazon"
-
-36. Valid Sudoku,57.7%,Medium,7.5K,839,https://leetcode.com/problems/valid-sudoku,"Amazon,Apple,Karat"
-
-37. Sudoku Solver,56.9%,Hard,7K,188,https://leetcode.com/problems/sudoku-solver,"Amazon,Apple,Bloomberg"
-
-38. Count and Say,51.4%,Medium,2.8K,5.8K,https://leetcode.com/problems/count-and-say,"Amazon,Google,Adobe"
-
-39. Combination Sum,67.8%,Medium,14.2K,287,https://leetcode.com/problems/combination-sum,"Airbnb,Amazon,Bloomberg"
-
-40. Combination Sum II,53.3%,Medium,7.4K,180,https://leetcode.com/problems/combination-sum-ii,"Airbnb,Reddit,Amazon"
-
-41. First Missing Positive,36.6%,Hard,12.5K,1.5K,https://leetcode.com/problems/first-missing-positive,"Amazon,Microsoft,Google"
-
-42. Trapping Rain Water,58.9%,Hard,24K,334,https://leetcode.com/problems/trapping-rain-water,"Amazon,Bloomberg,Microsoft"
-
-43. Multiply Strings,38.8%,Medium,5.4K,2.4K,https://leetcode.com/problems/multiply-strings,"Microsoft,Google,Facebook"
-
-44. Wildcard Matching,26.8%,Hard,6.1K,262,https://leetcode.com/problems/wildcard-matching,"Bloomberg,Apple,JPMorgan"
-
-45. Jump Game II,38.6%,Medium,10.2K,354,https://leetcode.com/problems/jump-game-ii,"Amazon,Google,Goldman Sachs"
-
-46. Permutations,74.9%,Medium,13.8K,228,https://leetcode.com/problems/permutations,"Amazon,Microsoft,Adobe"
-
-47. Permutations II,56.8%,Medium,6.8K,118,https://leetcode.com/problems/permutations-ii,"Amazon,Microsoft,Google"
-
-48. Rotate Image,70.1%,Medium,13K,603,https://leetcode.com/problems/rotate-image,"Amazon,Cisco,Adobe"
-
-49. Group Anagrams,66.5%,Medium,13.4K,394,https://leetcode.com/problems/group-anagrams,"Amazon,Apple,Yandex"
-
-"50. Pow(x n)",32.8%,Medium,6.2K,6.6K,https://leetcode.com/problems/powx-n,"Facebook,Amazon,Apple"
-
+question name,acceptance,difficulty,likes,dislikes,link,companies
+1026. Maximum Difference Between Node and Ancestor,74.2%,Medium,3K,75,https://leetcode.com/problems/maximum-difference-between-node-and-ancestor,"Amazon,Google,Facebook"
+1. Two Sum,49.1%,Easy,40.9K,1.3K,https://leetcode.com/problems/two-sum,"Amazon,Adobe,Apple"
+2. Add Two Numbers,39.9%,Medium,23.2K,4.5K,https://leetcode.com/problems/add-two-numbers,"Amazon,Apple,Adobe"
+3. Longest Substring Without Repeating Characters,33.8%,Medium,30.7K,1.3K,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Amazon,Bloomberg,Adobe"
+4. Median of Two Sorted Arrays,35.4%,Hard,21K,2.4K,https://leetcode.com/problems/median-of-two-sorted-arrays,"Amazon,Apple,Microsoft"
+5. Longest Palindromic Substring,32.4%,Medium,22.9K,1.3K,https://leetcode.com/problems/longest-palindromic-substring,"Amazon,Google,Bloomberg"
+6. Zigzag Conversion,43.3%,Medium,4.7K,10.3K,https://leetcode.com/problems/zigzag-conversion,"Amazon,Yahoo,Apple"
+7. Reverse Integer,27.3%,Medium,9.2K,11.2K,https://leetcode.com/problems/reverse-integer,"Amazon,Apple,Adobe"
+8. String to Integer (atoi),16.6%,Medium,2.6K,7.8K,https://leetcode.com/problems/string-to-integer-atoi,"Amazon,Microsoft,Adobe"
+9. Palindrome Number,53.0%,Easy,8K,2.4K,https://leetcode.com/problems/palindrome-number,"Amazon,Google,Bloomberg"
+10. Regular Expression Matching,28.2%,Hard,9.7K,1.6K,https://leetcode.com/problems/regular-expression-matching,"Amazon,Microsoft,Google"
+11. Container With Most Water,54.3%,Medium,21.6K,1.2K,https://leetcode.com/problems/container-with-most-water,"Amazon,Adobe,Apple"
+12. Integer to Roman,61.6%,Medium,5K,4.9K,https://leetcode.com/problems/integer-to-roman,"Amazon,Google,Bloomberg"
+13. Roman to Integer,58.2%,Easy,8.3K,482,https://leetcode.com/problems/roman-to-integer,"Amazon,Adobe,Apple"
+14. Longest Common Prefix,40.8%,Easy,11.6K,3.6K,https://leetcode.com/problems/longest-common-prefix,"Amazon,Apple,Google"
+15. 3Sum,32.4%,Medium,22.9K,2.1K,https://leetcode.com/problems/3sum,"Amazon,Apple,Facebook"
+16. 3Sum Closest,46.1%,Medium,8.3K,456,https://leetcode.com/problems/3sum-closest,"Amazon,Adobe,Facebook"
+17. Letter Combinations of a Phone Number,55.8%,Medium,13.4K,782,https://leetcode.com/problems/letter-combinations-of-a-phone-number,"Amazon,Microsoft,Google"
+18. 4Sum,36.4%,Medium,8.2K,957,https://leetcode.com/problems/4sum,"Amazon,Apple,Bloomberg"
+19. Remove Nth Node From End of List,40.1%,Medium,14K,580,https://leetcode.com/problems/remove-nth-node-from-end-of-list,"Amazon,Facebook,Apple"
+20. Valid Parentheses,40.6%,Easy,17.1K,891,https://leetcode.com/problems/valid-parentheses,"Amazon,BlackRock,Bloomberg"
+21. Merge Two Sorted Lists,62.0%,Easy,16.3K,1.4K,https://leetcode.com/problems/merge-two-sorted-lists,"Amazon,Apple,Google"
+22. Generate Parentheses,72.0%,Medium,16.2K,628,https://leetcode.com/problems/generate-parentheses,"Amazon,Adobe,Bloomberg"
+23. Merge k Sorted Lists,48.5%,Hard,15K,563,https://leetcode.com/problems/merge-k-sorted-lists,"Amazon,Apple,Facebook"
+24. Swap Nodes in Pairs,60.6%,Medium,8.7K,340,https://leetcode.com/problems/swap-nodes-in-pairs,"Microsoft,Adobe,Amazon"
+25. Reverse Nodes in k-Group,53.8%,Hard,9.8K,553,https://leetcode.com/problems/reverse-nodes-in-k-group,"Amazon,Microsoft,Apple"
+26. Remove Duplicates from Sorted Array,51.0%,Easy,9.4K,13K,https://leetcode.com/problems/remove-duplicates-from-sorted-array,"Apple,Amazon,Adobe"
+27. Remove Element,52.3%,Easy,4.9K,6.6K,https://leetcode.com/problems/remove-element,"Amazon,Apple,Facebook"
+28. Find the Index of the First Occurrence in a String,37.7%,Medium,1K,79,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,"Amazon,Bloomberg,Google"
+29. Divide Two Integers,17.3%,Medium,3.7K,12.2K,https://leetcode.com/problems/divide-two-integers,"Google,Amazon,Facebook"
+30. Substring with Concatenation of All Words,31.0%,Hard,405,25,https://leetcode.com/problems/substring-with-concatenation-of-all-words,"Apple,Amazon,Adobe"
+31. Next Permutation,37.2%,Medium,13.7K,3.9K,https://leetcode.com/problems/next-permutation,"Amazon,Apple,Facebook"
+32. Longest Valid Parentheses,32.7%,Hard,10.2K,324,https://leetcode.com/problems/longest-valid-parentheses,"Amazon,Facebook,Microsoft"
+33. Search in Rotated Sorted Array,38.8%,Medium,18.9K,1.1K,https://leetcode.com/problems/search-in-rotated-sorted-array,"Amazon,Bloomberg,Microsoft"
+34. Find First and Last Position of Element in Sorted Array,41.6%,Medium,15K,362,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,"Amazon,Facebook,Bloomberg"
+35. Search Insert Position,42.1%,Easy,10.8K,510,https://leetcode.com/problems/search-insert-position,"Apple,Google,Amazon"
+36. Valid Sudoku,57.7%,Medium,7.5K,843,https://leetcode.com/problems/valid-sudoku,"Amazon,Apple,Karat"
+37. Sudoku Solver,57.0%,Hard,7K,189,https://leetcode.com/problems/sudoku-solver,"Amazon,Google,Apple"
+38. Count and Say,51.4%,Medium,2.8K,5.9K,https://leetcode.com/problems/count-and-say,"Amazon,Adobe,Akuna Capital"
+39. Combination Sum,67.9%,Medium,14.3K,289,https://leetcode.com/problems/combination-sum,"Airbnb,Amazon,eBay"
+40. Combination Sum II,53.3%,Medium,7.4K,183,https://leetcode.com/problems/combination-sum-ii,"Airbnb,Reddit,Amazon"
+41. First Missing Positive,36.6%,Hard,12.5K,1.5K,https://leetcode.com/problems/first-missing-positive,"Amazon,Microsoft,Google"
+42. Trapping Rain Water,58.9%,Hard,24.1K,335,https://leetcode.com/problems/trapping-rain-water,"Amazon,Bloomberg,Microsoft"
+43. Multiply Strings,38.9%,Medium,5.5K,2.4K,https://leetcode.com/problems/multiply-strings,"Microsoft,Google,Facebook"
+44. Wildcard Matching,26.8%,Hard,6.2K,263,https://leetcode.com/problems/wildcard-matching,"Bloomberg,Apple,JPMorgan"
+45. Jump Game II,38.7%,Medium,10.2K,355,https://leetcode.com/problems/jump-game-ii,"Amazon,Google,Goldman Sachs"
+46. Permutations,75.0%,Medium,13.9K,230,https://leetcode.com/problems/permutations,"Amazon,Microsoft,Adobe"
+47. Permutations II,56.9%,Medium,6.8K,121,https://leetcode.com/problems/permutations-ii,"LinkedIn,Amazon,Microsoft"
+48. Rotate Image,70.2%,Medium,13.1K,607,https://leetcode.com/problems/rotate-image,"Amazon,Cisco,Adobe"
+49. Group Anagrams,66.5%,Medium,13.5K,397,https://leetcode.com/problems/group-anagrams,"Amazon,Apple,Yandex"
+50. Pow(x  n),32.8%,Medium,6.2K,6.7K,https://leetcode.com/problems/powx-n,"Facebook,Amazon,Apple"

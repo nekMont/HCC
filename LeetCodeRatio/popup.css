@@ -3,6 +3,7 @@
   cursor: pointer;
 }
 
+/*Table Styling */
 .table-sortable {
   border-collapse: collapse;
   margin: 25px 0;
@@ -12,33 +13,40 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
+/*Table Styling */
 .table-sortable thead tr {
   background-color: #009879;
   color: #ffffff;
   text-align: left;
 }
 
+/*Table Styling */
 .table-sortable th,
 .table-sortable td {
     padding: 12px 15px;
 }
 
+/*Table Styling */
 .table-sortable tbody tr {
   border-bottom: 1px solid #dddddd;
 }
 
+/*Table Styling */
 .table-sortable tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
 
+/*Table Styling */
 .table-sortable tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
 }
 
+/*Table Styling */
 .table-sortable tbody tr.active-row {
   font-weight: bold;
   color: #009879;
 }
+
 /* sets triangle pointing up in header when sorting */
 .table-sortable .th-sort-asc::after {
   content: "\25b4";
